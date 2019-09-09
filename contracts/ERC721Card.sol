@@ -26,5 +26,9 @@ contract ERC721Card is ERC721 {
 	function getCardCount() public view returns(uint count) {
 		return cards.length;
 	}
+
+	function getCardCount() public view returns(uint count) {
+		return cards.length;
+	}
 }
 
