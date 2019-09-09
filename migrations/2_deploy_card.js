@@ -1,5 +1,6 @@
 const fs = require('fs');
 const DAOLCard = artifacts.require('DAOLCard');
+const AzureUploader = require('@flui/klaytn-uploader').AzureUploader;
 
 module.exports = function(deployer) {
 	deployer.deploy(DAOLCard).then(() => {
