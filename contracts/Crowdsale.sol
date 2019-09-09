@@ -11,7 +11,7 @@ import '@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol';
  * @dev Very simple ERC20 Token that can be minted.
  * It is meant to be used in a crowdsale contract.
  */
-contract SampleCrowdsaleToken is ERC20Mintable, ERC20Detailed {
+contract DAOLCrowdsaleToken is ERC20Mintable, ERC20Detailed {
 	constructor() public ERC20Detailed('Sample Crowdsale Token', 'SCT', 18) {
 		// solhint-disable-previous-line no-empty-blocks
 	}
@@ -30,7 +30,7 @@ contract SampleCrowdsaleToken is ERC20Mintable, ERC20Detailed {
  * After adding multiple features it's good practice to run integration tests
  * to ensure that subcontracts works together as intended.
  */
-contract SampleCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
+contract DAOLCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
 	constructor(
 		uint256 openingTime,
 		uint256 closingTime,
