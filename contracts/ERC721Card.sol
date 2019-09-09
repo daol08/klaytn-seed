@@ -3,7 +3,7 @@ pragma solidity ^0.5.6;
 import '@openzeppelin/contracts/token/ERC721/ERC721Full.sol';
 
 contract ERC721Card is ERC721 {
-	struct Card {
+	struct Card {//상태선언
 		string name; // Name of the Card
 		uint256 level; // Level of the Card
 	}
