@@ -1,14 +1,14 @@
 const fs = require('fs');
-const ERC721Card = artifacts.require('ERC721Card');
+const DAOLCard = artifacts.require('DAOLCard');
 
 module.exports = function(deployer) {
-	deployer.deploy(ERC721Card).then(() => {
+	deployer.deploy(DAOLCard).then(() => {
 		const data = JSON.stringify({
-			blockAddress: ERC721Card.blockAddress,
-			contractAddress: ERC721Card.address
+			blockAddress: DAOLCard.blockAddress,
+			contractAddress: DAOLCard.address
 		});
 		fs.writeFile('./contract.json', data, () =>
-			console.log(`migrate completed: ${ERC721Card.address}`)
+			console.log(`migrate completed: ${DAOLCard.address}`)
 		);
 	});
 };
